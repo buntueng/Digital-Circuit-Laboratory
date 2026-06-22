@@ -1,0 +1,19 @@
+module hello;
+
+reg clk;
+
+initial begin
+    $dumpfile("wave.vcd");
+    $dumpvars(0, hello);
+
+    clk = 0;
+
+    #5 clk = 1;
+    #5 clk = 0;
+    #5 clk = 1;
+    #5 clk = 0;
+
+    $finish;
+end
+
+endmodule
